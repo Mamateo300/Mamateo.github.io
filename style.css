@@ -18,6 +18,96 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2rem;
+  background:
+    radial-gradient(circle at 22% 18%, rgba(255, 255, 255, 0.5), transparent 55%),
+    radial-gradient(circle at 78% 82%, rgba(0, 0, 0, 0.05), transparent 55%),
+    var(--paper);
+  font-family: "Courier New", monospace;
+}
+
+.tampons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem 3rem;
+  max-width: 620px;
+}
+
+.lien-tp {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 3px double var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.lien-tp::before {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  border-radius: 50%;
+  border: 1px solid var(--ring);
+}
+
+.tampons .lien-tp:nth-child(1) { transform: rotate(-6deg); }
+.tampons .lien-tp:nth-child(2) { transform: rotate(4deg); }
+.tampons .lien-tp:nth-child(3) { transform: rotate(-3deg); }
+.tampons .lien-tp:nth-child(4) { transform: rotate(6deg); }
+
+.tampons .lien-tp:nth-child(1):hover,
+.tampons .lien-tp:nth-child(1):focus-visible { transform: rotate(-6deg) scale(1.05); }
+.tampons .lien-tp:nth-child(2):hover,
+.tampons .lien-tp:nth-child(2):focus-visible { transform: rotate(4deg) scale(1.05); }
+.tampons .lien-tp:nth-child(3):hover,
+.tampons .lien-tp:nth-child(3):focus-visible { transform: rotate(-3deg) scale(1.05); }
+.tampons .lien-tp:nth-child(4):hover,
+.tampons .lien-tp:nth-child(4):focus-visible { transform: rotate(6deg) scale(1.05); }
+
+.lien-tp:hover,
+.lien-tp:focus-visible {
+  background: var(--accent);
+  color: var(--paper);
+}
+
+@media (max-width: 480px) {
+  .lien-tp {
+    width: 140px;
+    height: 140px;
+    font-size: 0.9rem;
+  }
+}:root {
+  --paper: #f4ede0;
+  --ink: #2b2420;
+  --accent: #a13d2b;
+  --ring: #c9b896;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background:
     radial-gradient(circle at 22% 18%, rgba(255, 255, 255, 0.5), transparent 55%),
     radial-gradient(circle at 78% 82%, rgba(0, 0, 0, 0.05), transparent 55%),

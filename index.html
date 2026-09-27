@@ -7,20 +7,34 @@
   <title>Mon classeur numérique</title>
 </head>
 <body>
-  <div class="terminal">
-    <div class="terminal__bar">
-      <span class="dot dot--red"></span>
-      <span class="dot dot--yellow"></span>
-      <span class="dot dot--green"></span>
-      <span class="terminal__title">Mon classeur numérique</span>
-    </div>
+  <main class="page">
+    <section class="hero">
+      <h1 class="hero__title">Mon classeur numérique</h1>
+      <p class="hero__subtitle">Tous tes documents, cours et projets réunis au même endroit.</p>
+    </section>
 
-    <nav class="terminal__body tampons">
-      <a class="lien-tp" href="https://mamateo300.alwaysdata.net/documents/test.txt" target="_blank" rel="noopener">Mes TP</a>
-      <a class="lien-tp" href="https://mamateo300.alwaysdata.net/documents/test.txt" target="_blank" rel="noopener">Cours</a>
-      <a class="lien-tp" href="https://mamateo300.alwaysdata.net/documents/test.txt" target="_blank" rel="noopener">Projets</a>
-      <a class="lien-tp" href="https://mamateo300.alwaysdata.net/documents/test.txt" target="_blank" rel="noopener">Révisions</a>
+    <nav class="shelf" aria-label="Accès aux documents">
+      <a class="shelf__card" href="https://mamateo300.alwaysdata.net/documents/test.txt" target="_blank" rel="noopener">
+        <span class="shelf__name">Mes TP</span>
+        <span class="shelf__desc">Travaux pratiques</span>
+        <span class="shelf__arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="shelf__card" href="https://mamateo300.alwaysdata.net/documents/test.txt" target="_blank" rel="noopener">
+        <span class="shelf__name">Cours</span>
+        <span class="shelf__desc">Supports de cours</span>
+        <span class="shelf__arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="shelf__card" href="https://mamateo300.alwaysdata.net/documents/test.txt" target="_blank" rel="noopener">
+        <span class="shelf__name">Projets</span>
+        <span class="shelf__desc">Dossiers en cours</span>
+        <span class="shelf__arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="shelf__card" href="https://mamateo300.alwaysdata.net/documents/test.txt" target="_blank" rel="noopener">
+        <span class="shelf__name">Révisions</span>
+        <span class="shelf__desc">Fiches et rappels</span>
+        <span class="shelf__arrow" aria-hidden="true">→</span>
+      </a>
     </nav>
-  </div>
+  </main>
 </body>
 </html>

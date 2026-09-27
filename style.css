@@ -72,8 +72,9 @@ body {
 .shelf__card {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
   height: 100%;
   padding: 1.8rem 1.4rem;
   background: var(--card-bg);
@@ -81,6 +82,7 @@ body {
   border-radius: 18px;
   text-decoration: none;
   color: var(--ink);
+  text-align: center;
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
@@ -108,8 +110,6 @@ body {
 }
 
 .shelf__arrow {
-  margin-top: 1.4rem;
-  align-self: flex-end;
   width: 34px;
   height: 34px;
   display: flex;

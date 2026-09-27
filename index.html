@@ -7,6 +7,30 @@
   <title>Mon classeur numérique</title>
 </head>
 <body>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="gear" viewBox="0 0 100 100">
+      <path d="M 86.00,50.00 L 96.00,50.00 L 93.75,64.21 L 84.24,61.12 L 79.12,71.16 L 87.21,77.04 L 77.04,87.21 L 71.16,79.12 L 61.12,84.24 L 64.21,93.75 L 50.00,96.00 L 50.00,86.00 L 38.88,84.24 L 35.79,93.75 L 22.96,87.21 L 28.84,79.12 L 20.88,71.16 L 12.79,77.04 L 6.25,64.21 L 15.76,61.12 L 14.00,50.00 L 4.00,50.00 L 6.25,35.79 L 15.76,38.88 L 20.88,28.84 L 12.79,22.96 L 22.96,12.79 L 28.84,20.88 L 38.88,15.76 L 35.79,6.25 L 50.00,4.00 L 50.00,14.00 L 61.12,15.76 L 64.21,6.25 L 77.04,12.79 L 71.16,20.88 L 79.12,28.84 L 87.21,22.96 L 93.75,35.79 L 84.24,38.88 Z"/>
+      <circle cx="50" cy="50" r="18" style="fill:var(--bg)"/>
+    </symbol>
+  </svg>
+
+  <div class="gear-rail gear-rail--left" aria-hidden="true">
+    <svg class="gear gear--cw"  style="--size:110px; top:-10px;"><use href="#gear"/></svg>
+    <svg class="gear gear--ccw" style="--size:80px; top:70px; left:-15px;"><use href="#gear"/></svg>
+    <svg class="gear gear--cw"  style="--size:120px; top:190px; left:10px;"><use href="#gear"/></svg>
+    <svg class="gear gear--ccw" style="--size:85px; top:340px; left:-20px;"><use href="#gear"/></svg>
+    <svg class="gear gear--cw"  style="--size:110px; top:440px; left:5px;"><use href="#gear"/></svg>
+  </div>
+
+  <div class="gear-rail gear-rail--right" aria-hidden="true">
+    <svg class="gear gear--cw"  style="--size:110px; top:-10px; right:-10px;"><use href="#gear"/></svg>
+    <svg class="gear gear--ccw" style="--size:80px; top:70px; right:-15px;"><use href="#gear"/></svg>
+    <svg class="gear gear--cw"  style="--size:120px; top:190px; right:0px;"><use href="#gear"/></svg>
+    <svg class="gear gear--ccw" style="--size:85px; top:340px; right:-20px;"><use href="#gear"/></svg>
+    <svg class="gear gear--cw"  style="--size:110px; top:440px; right:0px;"><use href="#gear"/></svg>
+  </div>
+
   <main class="page">
     <section class="hero">
       <h1 class="hero__title">Mon classeur numérique</h1>
@@ -15,24 +39,20 @@
 
     <nav class="shelf" aria-label="Accès aux documents">
       <a class="shelf__card" href="https://mamateo300.alwaysdata.net/documents/test.txt" target="_blank" rel="noopener">
-        <span class="shelf__name">Mes TP</span>
-        <span class="shelf__desc">Travaux pratiques</span>
-        <span class="shelf__arrow" aria-hidden="true">→</span>
+        <span class="shelf__label shelf__label--pink">Mes TP</span>
+        <span class="shelf__body"></span>
       </a>
       <a class="shelf__card" href="https://mamateo300.alwaysdata.net/documents/test.txt" target="_blank" rel="noopener">
-        <span class="shelf__name">Cours</span>
-        <span class="shelf__desc">Supports de cours</span>
-        <span class="shelf__arrow" aria-hidden="true">→</span>
+        <span class="shelf__label shelf__label--green">Cours</span>
+        <span class="shelf__body"></span>
       </a>
       <a class="shelf__card" href="https://mamateo300.alwaysdata.net/documents/test.txt" target="_blank" rel="noopener">
-        <span class="shelf__name">Projets</span>
-        <span class="shelf__desc">Dossiers en cours</span>
-        <span class="shelf__arrow" aria-hidden="true">→</span>
+        <span class="shelf__label shelf__label--cyan">Projets</span>
+        <span class="shelf__body"></span>
       </a>
       <a class="shelf__card" href="https://mamateo300.alwaysdata.net/documents/test.txt" target="_blank" rel="noopener">
-        <span class="shelf__name">Révisions</span>
-        <span class="shelf__desc">Fiches et rappels</span>
-        <span class="shelf__arrow" aria-hidden="true">→</span>
+        <span class="shelf__label shelf__label--yellow">Révisions</span>
+        <span class="shelf__body"></span>
       </a>
     </nav>
   </main>

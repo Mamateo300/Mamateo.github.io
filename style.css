@@ -37,25 +37,35 @@ body {
 /* ---------- Engrenages décoratifs ---------- */
 
 .gear-rail {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 220px;
-  height: 560px;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
   pointer-events: none;
   z-index: 0;
 }
 
-.gear-rail--left { left: -60px; }
-.gear-rail--right { right: -60px; }
+.gear-rail--left { left: -90px; }
+.gear-rail--right { right: -90px; }
 
 .gear {
-  position: absolute;
+  position: relative;
   width: var(--size);
   height: var(--size);
+  flex-shrink: 0;
   fill: var(--gear-color);
-  opacity: 0.9;
+  opacity: 0.95;
 }
+
+.gear-rail--left .gear:nth-child(odd) { margin-right: -55px; }
+.gear-rail--left .gear:nth-child(even) { margin-left: -55px; }
+.gear-rail--right .gear:nth-child(odd) { margin-left: -55px; }
+.gear-rail--right .gear:nth-child(even) { margin-right: -55px; }
 
 .gear--cw { animation: spin-cw 9s linear infinite; }
 .gear--ccw { animation: spin-ccw 9s linear infinite; }

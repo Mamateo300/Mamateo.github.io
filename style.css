@@ -40,32 +40,34 @@ body {
   position: fixed;
   top: 0;
   height: 100vh;
-  width: 240px;
+  width: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 20px 0;
   pointer-events: none;
   z-index: 0;
 }
 
-.gear-rail--left { left: -90px; }
-.gear-rail--right { right: -90px; }
+.gear-rail--left { left: -85px; }
+.gear-rail--right { right: -85px; }
 
 .gear {
   position: relative;
-  width: var(--size);
-  height: var(--size);
+  width: 160px;
+  height: 160px;
   flex-shrink: 0;
   fill: var(--gear-color);
   opacity: 0.95;
 }
 
-.gear-rail--left .gear:nth-child(odd) { margin-right: -55px; }
-.gear-rail--left .gear:nth-child(even) { margin-left: -55px; }
-.gear-rail--right .gear:nth-child(odd) { margin-left: -55px; }
-.gear-rail--right .gear:nth-child(even) { margin-right: -55px; }
+.gear + .gear {
+  margin-top: -46px;
+}
+
+.gear-rail .gear:nth-child(even) {
+  animation-delay: -0.45s;
+}
 
 .gear--cw { animation: spin-cw 9s linear infinite; }
 .gear--ccw { animation: spin-ccw 9s linear infinite; }
